@@ -5,7 +5,7 @@ pipeline {
 
         stage('Clone') {
             steps {
-                git 'https://github.com/YOUR_USERNAME/student-app.git'
+                git 'https://github.com/Bengis-cpu/student-app.git'
             }
         }
 
