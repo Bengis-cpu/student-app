@@ -3,12 +3,6 @@ pipeline {
 
     stages {
 
-        stage('Clone') {
-            steps {
-                git 'https://github.com/Bengis-cpu/student-app.git'
-            }
-        }
-
         stage('Build') {
             steps {
                 bat 'npm install'
@@ -17,7 +11,7 @@ pipeline {
 
         stage('Test') {
             steps {
-                bat 'echo "No tests implemented"'
+                bat 'echo No tests implemented'
             }
         }
 
