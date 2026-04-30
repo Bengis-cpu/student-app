@@ -21,9 +21,10 @@ pipeline {
             }
         }
 
-        stage('Run Container') {
+        stage('Deploy to Kubernetes') {
             steps {
-                bat 'docker run -d -p 3000:3000 student-app'
+                bat 'kubectl apply -f deployment.yaml'
+        	bat 'kubectl apply -f service.yaml'
             }
         }
     }
